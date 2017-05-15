@@ -32,7 +32,7 @@ plot6 <- function() {
   
   print(r)
   
-  dev.copy(png, 'plot5.png')
+  dev.copy(png, 'plot6.png')
   dev.off()
 }
 
