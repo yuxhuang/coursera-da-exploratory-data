@@ -1,4 +1,10 @@
-source('./readData.R')
+if (!exists('NEI')) {
+  NEI <- readRDS('summarySCC_PM25.rds')
+}
+
+if (!exists('SCC')) {
+  SCC <- readRDS('Source_Classification_Code.rds')
+}
 
 plot1 <- function() {
   d <- with(NEI, tapply(Emissions, year, function(x) sum(as.numeric(x))))
